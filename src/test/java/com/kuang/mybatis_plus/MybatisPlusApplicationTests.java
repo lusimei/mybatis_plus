@@ -30,7 +30,7 @@ class MybatisPlusApplicationTests {
         User user = new User();
         user.setAge(12);
         user.setEmail("AAA@163.com");
-        user.setName("BBB");
+        user.setName("teddy");
         userMapper.insert(user);
         System.out.println(user);
     }
@@ -38,7 +38,7 @@ class MybatisPlusApplicationTests {
     @Test
     void testUpdate(){
         User user = new User();
-        user.setId(1353586686646546443l);
+        user.setId(1353586686646546444l);
         user.setEmail("CCC@163.com");
         user.setName("TIDY");
         userMapper.updateById(user);
@@ -90,5 +90,23 @@ class MybatisPlusApplicationTests {
         IPage<User> userIPage = userMapper.selectPage(new Page(2,5),null);
         userIPage.getRecords().forEach(System.out::println);
         System.out.println(userIPage.getTotal());
+    }
+
+    @Test
+    public void testDeleteById(){
+        System.out.println(userMapper.deleteById(1353586686646546444l));
+    }
+
+    @Test
+    public void testBatchDelete(){
+        System.out.println(userMapper.deleteBatchIds(Arrays.asList(2,3)));
+    }
+
+    @Test
+    public void testDeleteMap(){
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("name","teddy");
+        map.put("age",12);
+        System.out.println(userMapper.deleteByMap(map));
     }
 }

@@ -57,6 +57,12 @@
             <!--<version>3.0.5</version>-->
         </dependency>
 
+        <!--性能测试  正式上线时排除-->
+        <dependency>
+            <groupId>p6spy</groupId>
+            <artifactId>p6spy</artifactId>
+            <version>3.8.7</version>
+        </dependency>
     </dependencies>
 
     <build>
