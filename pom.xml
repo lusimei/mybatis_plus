@@ -63,6 +63,13 @@
             <artifactId>p6spy</artifactId>
             <version>3.8.7</version>
         </dependency>
+
+        <!--代码生成嚣-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>3.4.0</version>
+        </dependency>
     </dependencies>
 
     <build>
