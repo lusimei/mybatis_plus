@@ -64,11 +64,23 @@
             <version>3.8.7</version>
         </dependency>
 
-        <!--代码生成嚣-->
+        <!--代码生成嚣 (经过测试以下两个依赖需要同时添加)-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
             <version>3.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>2.2</version>
+        </dependency>
+
+        <!--swagger-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-common</artifactId>
+            <version>2.7.0</version>
         </dependency>
     </dependencies>
 
